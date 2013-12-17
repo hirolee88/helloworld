@@ -1,0 +1,89 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+A	.\A.java	/^interface A{$/;"	i
+AImpl	.\AImpl.java	/^class AImpl implements A{$/;"	c
+AWorker	.\AWorker.java	/^	public AWorker(Worker worker){$/;"	m	class:AWorker
+AWorker	.\AWorker.java	/^class AWorker implements Worker{$/;"	c
+B	.\B.java	/^class B{$/;"	c
+C	.\C.java	/^class C extends A, B{$/;"	c
+CannoPrinter	.\CannoPrinter.java	/^class CannoPrinter implements Printer{$/;"	c
+Carpenter	.\Carpenter.java	/^class Carpenter implements Worker{$/;"	c
+Chinese	.\Chinese.java	/^	Chinese(){$/;"	m	class:Chinese
+Chinese	.\Chinese.java	/^class Chinese extends Person{$/;"	c
+FirstThread	.\FirstThread.java	/^class FirstThread extends Thread{$/;"	c
+HPPrinter	.\HPPrinter.java	/^class HPPrinter implements Printer{$/;"	c
+Hello	.\Hello.java	/^public class Hello{$/;"	c
+MyThread1	.\MyThread1.java	/^	public MyThread1(Service service){$/;"	m	class:MyThread1
+MyThread1	.\MyThread1.java	/^class MyThread1 implements Runnable{$/;"	c
+MyThread2	.\MyThread2.java	/^	public MyThread2(Service service){$/;"	m	class:MyThread2
+MyThread2	.\MyThread2.java	/^class MyThread2 implements Runnable{$/;"	c
+Person	.\Person.java	/^public class Person{$/;"	c
+Plumber	.\Plumber.java	/^class Plumber implements Worker{$/;"	c
+Printer	.\Printer.java	/^interface Printer{$/;"	i
+PrinterFactory	.\PrinterFactory.java	/^class PrinterFactory{$/;"	c
+RunnableImpl	.\RunnableImpl.java	/^class RunnableImpl implements Runnable{$/;"	c
+Service	.\Service.java	/^class Service{$/;"	c
+Student	.\Student.java	/^class Student extends Person{$/;"	c
+Test	.\Test.java	/^class Test{$/;"	c
+Test01	.\Test01.java	/^class Test01{$/;"	c
+Testchar	.\Testchar.java	/^class Testchar{$/;"	c
+USB	.\USB.java	/^interface USB{$/;"	i
+USBPhone	.\USBPhone.java	/^class USBPhone implements USB, WiFi{$/;"	c
+User	.\User.java	/^class User{$/;"	c
+WiFi	.\WiFi.java	/^interface WiFi{$/;"	i
+Worker	.\Worker.java	/^interface Worker{$/;"	i
+age	.\Person.java	/^	protected int age;$/;"	f	class:Person
+age	.\User.java	/^	int age;$/;"	f	class:User
+clean	.\CannoPrinter.java	/^	private void clean(){$/;"	m	class:CannoPrinter	file:
+close	.\CannoPrinter.java	/^	public void close(){$/;"	m	class:CannoPrinter
+close	.\HPPrinter.java	/^	public void close(){$/;"	m	class:HPPrinter
+close	.\Printer.java	/^	public void close();$/;"	m	interface:Printer
+close	.\USBPhone.java	/^	public void close(){$/;"	m	class:USBPhone
+close	.\WiFi.java	/^	void close();$/;"	m	interface:WiFi
+com.leegoo	.\Person.java	/^package com.leegoo;$/;"	p
+doSomeWork	.\AWorker.java	/^	public void doSomeWork(){$/;"	m	class:AWorker
+doSomeWork	.\Carpenter.java	/^	public void doSomeWork(){$/;"	m	class:Carpenter
+doSomeWork	.\Plumber.java	/^	public void doSomeWork(){$/;"	m	class:Plumber
+doSomeWork	.\Worker.java	/^	public void doSomeWork();$/;"	m	interface:Worker
+doSomething	.\A.java	/^	public void doSomething();$/;"	m	interface:A
+doSomething	.\AImpl.java	/^	public void doSomething(){$/;"	m	class:AImpl
+eat	.\Chinese.java	/^	void eat(){$/;"	m	class:Chinese
+eat	.\Person.java	/^	void eat(){$/;"	m	class:Person
+equals	.\User.java	/^	public boolean equals(Object obj){$/;"	m	class:User
+fun	.\B.java	/^	public void fun(A a){$/;"	m	class:B
+fun1	.\Service.java	/^	public void fun1(){$/;"	m	class:Service
+fun2	.\Service.java	/^	public void	fun2(){$/;"	m	class:Service
+func	.\C.java	/^	public func();$/;"	m	class:C
+i	.\RunnableImpl.java	/^	int i = 100;$/;"	f	class:RunnableImpl
+introduce	.\Student.java	/^	void introduce(){$/;"	m	class:Student
+main	.\Hello.java	/^	public static void main(String[] args) {$/;"	m	class:Hello
+main	.\Test.java	/^	public static void main(String args[]){$/;"	m	class:Test
+main	.\Test01.java	/^	public static void main(String[] args) {$/;"	m	class:Test01
+main	.\Testchar.java	/^	public static void main(String [] args){$/;"	m	class:Testchar
+name	.\Person.java	/^	protected String name;$/;"	f	class:Person
+name	.\User.java	/^	String name;$/;"	f	class:User
+open	.\CannoPrinter.java	/^	public void open(){$/;"	m	class:CannoPrinter
+open	.\HPPrinter.java	/^	public void open(){$/;"	m	class:HPPrinter
+open	.\Printer.java	/^	public void open();$/;"	m	interface:Printer
+open	.\USBPhone.java	/^	public void open(){$/;"	m	class:USBPhone
+open	.\WiFi.java	/^	void open();$/;"	m	interface:WiFi
+org.leegoo	.\Student.java	/^package org.leegoo;$/;"	p
+print	.\CannoPrinter.java	/^	public void print(String s){$/;"	m	class:CannoPrinter
+print	.\HPPrinter.java	/^	public void print(String s){$/;"	m	class:HPPrinter
+print	.\Printer.java	/^	public void print(String s);$/;"	m	interface:Printer
+read	.\USB.java	/^	public void read();$/;"	m	interface:USB
+read	.\USBPhone.java	/^	public void read(){$/;"	m	class:USBPhone
+run	.\FirstThread.java	/^	public void run(){$/;"	m	class:FirstThread
+run	.\MyThread1.java	/^	public void run(){$/;"	m	class:MyThread1
+run	.\MyThread2.java	/^	public void run(){$/;"	m	class:MyThread2
+run	.\RunnableImpl.java	/^	public void run(){$/;"	m	class:RunnableImpl
+service	.\MyThread1.java	/^	private Service service;$/;"	f	class:MyThread1	file:
+service	.\MyThread2.java	/^	private Service service;$/;"	f	class:MyThread2	file:
+sleep	.\Person.java	/^	void sleep(){$/;"	m	class:Person
+worker	.\AWorker.java	/^	private Worker worker;$/;"	f	class:AWorker	file:
+write	.\USB.java	/^	public void write();$/;"	m	interface:USB
+write	.\USBPhone.java	/^	public void write(){$/;"	m	class:USBPhone

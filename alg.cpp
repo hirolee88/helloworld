@@ -1,8 +1,8 @@
-#include<iostream>
-#include<stdlib.h>
-#include<math.h>
-#include<time.h>
-# define N 50
+#include <iostream>
+#include <stdlib.h>
+#include <math.h>
+#include <time.h>
+#define N 50
 using namespace std;
 //产生随机数
 int r_number(int m,int n)
@@ -24,7 +24,7 @@ void d_select(int a[N],int m,int n)
 		if(k!=m)
 		{
 			t=a[k];
-			a[k]=a[m];
+			a[k]=a[m];		
 			a[m]=t;
 		}
 		if(m<n)
@@ -54,19 +54,19 @@ void d_bubble(int *a,int n)
 //非递归实现选择排序
 void n_select(int a[N],int m,int n)
 {
-    int i,j,t,k;
+	int i,j,t,k;
 	for(i=m+1;i<=n;i++)
 	{
-           k=m;
-	       for(j=i+1;j<=n;j++)
+		   k=m;
+		   for(j=i+1;j<=n;j++)
 		   {
-		      if(a[k]>a[j])
+			  if(a[k]>a[j])
 			  {
-			    k=j;
+				k=j;
 			  }
 		   }
 
-	    	if(k!=m)
+			if(k!=m)
 			{
 			  t=a[k];
 			  a[k]=a[m];
@@ -100,7 +100,7 @@ int q_sort_1(int a[N],int m,int n)
 {
 	int p,k;
 	p=a[m];
-    a[m]=p;
+	a[m]=p;
 	k=m;
 	while(m<n)
 	{
@@ -119,7 +119,7 @@ void q_sort_2(int a[N],int m,int n)
    int p;
    if(m<n)
    {
-      p=q_sort_1(a,m,n);
+	  p=q_sort_1(a,m,n);
 	  q_sort_2(a,m,p-1);
 	  q_sort_2(a,p+1,n);
 	}
@@ -141,9 +141,9 @@ void insert(int a[N],int n)
 		while(j>=0&&a[j]>temp)
 		{
 			a[j+1]=a[j];
-            j--;
+			j--;
 		}
-       a[j+1]=temp;
+	   a[j+1]=temp;
 	}
 }
 //归并排序
@@ -184,10 +184,10 @@ void m_sort(int a[N],int a1[N],int m,int n)
    else
    {
 
-	    mid=(n+m)/2;
-	    m_sort(a,a1,m,mid);
-	    m_sort(a,a1,mid+1,n);
-	    sort(a1,a,m,mid,n);
+		mid=(n+m)/2;
+		m_sort(a,a1,m,mid);
+		m_sort(a,a1,mid+1,n);
+		sort(a1,a,m,mid,n);
    }
 }
 //堆排序
@@ -223,7 +223,7 @@ void h_sort(int a[N],int length)
 		temp=a[0];
 		a[0]=a[j];
 		a[j]=temp;
-        h_Adjust(a,0,j);
+		h_Adjust(a,0,j);
 	}
 }
 //希尔排序
@@ -247,17 +247,17 @@ void shell_sort(int a[N],int n)
 //计数排序
 void count_sort(int*a,int n)
 {
-     int temp[51]={0};
-     for(int i=0;i<=n;i++) temp[a[i]]++;
-     for( i=1;i<51;i++) temp[i]+=temp[i-1];
-     int*c=(int*)malloc(sizeof(int)*(51+1));
-     for(i=0;i<=n;i++)
-     {
-            c[temp[a[i]]-1]=a[i];
-            temp[a[i]]--;
-     }
-     for( i=0;i<=n;i++) a[i]=c[i];
-     free(c);
+	 int temp[51]={0};
+	 for(int i=0;i<=n;i++) temp[a[i]]++;
+	 for( i=1;i<51;i++) temp[i]+=temp[i-1];
+	 int*c=(int*)malloc(sizeof(int)*(51+1));
+	 for(i=0;i<=n;i++)
+	 {
+			c[temp[a[i]]-1]=a[i];
+			temp[a[i]]--;
+	 }
+	 for( i=0;i<=n;i++) a[i]=c[i];
+	 free(c);
 }
 
 int main()
@@ -291,14 +291,14 @@ int main()
 			int a[N];
 			cout<<"请输入您需要排序的个数N:"<<endl;
 			cin>>n;
-            cout<<"产生的随机数为:"<<endl;
+			cout<<"产生的随机数为:"<<endl;
 			for(i=0;i<=n-1;i++)
 			{
-                a[i]=r_number(40,50);
+				a[i]=r_number(40,50);
 				cout<<a[i]<<"\t";
 			}
 			cout<<endl;
-            d_select(a,0,n-1);
+			d_select(a,0,n-1);
 			cout<<"排序后的结果为:"<<endl;
 			for(i=0;i<=n-1;i++)
 			{
@@ -308,19 +308,19 @@ int main()
 		break;
 	case 2:
 		{
-            //递归实现选择排序
+			//递归实现选择排序
 			int n;
 			int a[N];
 			cout<<"请输入您需要排序的个数N:"<<endl;
 			cin>>n;
-            cout<<"产生的随机数为:"<<endl;
+			cout<<"产生的随机数为:"<<endl;
 			for( i=0;i<=n-1;i++)
 			{
-                a[i]=r_number(40,50);
+				a[i]=r_number(40,50);
 				cout<<a[i]<<"\t";
 			}
 			cout<<endl;
-            d_bubble(a,n-1);
+			d_bubble(a,n-1);
 			cout<<"排序后的结果为:"<<endl;
 			for(i=0;i<=n-1;i++)
 			{
@@ -330,18 +330,18 @@ int main()
 		break;
 	case 3:
 		{
-            int n;
+			int n;
 			int a[N];
 			cout<<"请输入您需要排序的个数N:"<<endl;
 			cin>>n;
-            cout<<"产生的随机数为:"<<endl;
+			cout<<"产生的随机数为:"<<endl;
 			for( i=0;i<=n-1;i++)
 			{
-                a[i]=r_number(40,50);
+				a[i]=r_number(40,50);
 				cout<<a[i]<<"\t";
 			}
 			cout<<endl;
-            n_select(a,0,n-1);
+			n_select(a,0,n-1);
 			cout<<"排序后的结果为:"<<endl;
 			for(i=0;i<=n-1;i++)
 			{
@@ -350,18 +350,18 @@ int main()
 		}
 		break;
 	case 4:{
-		    int n;
+			int n;
 			int a[N];
 			cout<<"请输入您需要排序的个数N:"<<endl;
 			cin>>n;
-            cout<<"产生的随机数为:"<<endl;
+			cout<<"产生的随机数为:"<<endl;
 			for(i=0;i<=n-1;i++)
 			{
-                a[i]=r_number(40,50);
+				a[i]=r_number(40,50);
 				cout<<a[i]<<"\t";
 			}
 			cout<<endl;
-            n_bubble(a,n-1);
+			n_bubble(a,n-1);
 			cout<<"排序后的结果为:"<<endl;
 			for(i=0;i<=n-1;i++)
 			{
@@ -371,14 +371,14 @@ int main()
 		break;
 	case 5:
 		{
-            int n;
+			int n;
 			int a[N];
 			cout<<"请输入您需要排序的个数N:"<<endl;
 			cin>>n;
-            cout<<"产生的随机数为:"<<endl;
+			cout<<"产生的随机数为:"<<endl;
 			for( i=0;i<=n-1;i++)
 			{
-                a[i]=r_number(40,50);
+				a[i]=r_number(40,50);
 				cout<<a[i]<<"\t";
 			}
 			cout<<endl;
@@ -393,14 +393,14 @@ int main()
 		break;
 	case 6:
 		{
-            int n;
+			int n;
 			int a[N];
 			cout<<"请输入您需要排序的个数N:"<<endl;
 			cin>>n;
-            cout<<"产生的随机数为:"<<endl;
+			cout<<"产生的随机数为:"<<endl;
 			for( i=0;i<=n-1;i++)
 			{
-                a[i]=r_number(40,50);
+				a[i]=r_number(40,50);
 				cout<<a[i]<<"\t";
 			}
 			cout<<endl;
@@ -414,14 +414,14 @@ int main()
 		break;
 	case 7:
 		{
-            int n;
+			int n;
 			int a[N],a1[N];
 			cout<<"请输入您需要排序的个数N:"<<endl;
 			cin>>n;
-            cout<<"产生的随机数为:"<<endl;
+			cout<<"产生的随机数为:"<<endl;
 			for(i=0;i<=n-1;i++)
 			{
-                a[i]=r_number(40,50);
+				a[i]=r_number(40,50);
 				cout<<a[i]<<"\t";
 			}
 			cout<<endl;
@@ -435,18 +435,18 @@ int main()
 		}
 		break;
 	case 8:{
-            int n;
+			int n;
 			int a[N];
 			cout<<"请输入您需要排序的个数N:"<<endl;
 			cin>>n;
-            cout<<"产生的随机数为:"<<endl;
+			cout<<"产生的随机数为:"<<endl;
 			for( i=0;i<=n-1;i++)
 			{
-                a[i]=r_number(40,50);
+				a[i]=r_number(40,50);
 				cout<<a[i]<<"\t";
 			}
 			cout<<endl;
-		     h_sort(a,n);
+			 h_sort(a,n);
 			cout<<"排序后的结果为:"<<endl;
 			for(i=0;i<=n-1;i++)
 			{
@@ -455,18 +455,18 @@ int main()
 		   }
 		break;
 	case 9:{
-		    int n;
+			int n;
 			int a[N];
 			cout<<"请输入您需要排序的个数N:"<<endl;
 			cin>>n;
-            cout<<"产生的随机数为:"<<endl;
+			cout<<"产生的随机数为:"<<endl;
 			for( i=0;i<=n-1;i++)
 			{
-                a[i]=r_number(40,50);
+				a[i]=r_number(40,50);
 				cout<<a[i]<<"\t";
 			}
 			cout<<endl;
-		    shell_sort(a,n);
+			shell_sort(a,n);
 			cout<<"排序后的结果为:"<<endl;
 			for(i=0;i<=n-1;i++)
 			{
@@ -475,18 +475,18 @@ int main()
 		   }break;
 	case 10:
 		{
-            int n;
+			int n;
 			int a[N];
 			cout<<"请输入您需要排序的个数N:"<<endl;
 			cin>>n;
-            cout<<"产生的随机数为:"<<endl;
+			cout<<"产生的随机数为:"<<endl;
 			for( i=0;i<=n-1;i++)
 			{
-                a[i]=r_number(40,50);
+				a[i]=r_number(40,50);
 				cout<<a[i]<<"\t";
 			}
 			cout<<endl;
-		    count_sort(a,n-1);
+			count_sort(a,n-1);
 			cout<<"排序后的结果为:"<<endl;
 			for(i=0;i<n;i++)
 			{
